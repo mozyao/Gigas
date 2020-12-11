@@ -1,12 +1,12 @@
 version: '3'
 services:
-  18888-go:
-    image: 18888-go
-    ports:
-    - "8080:8080"
-    links:
-    - 18888-python
   18888-python:
     image: 18888-python
     ports:
       - "5000:5000"
+    links:
+      - 18888-go
+  18888-go:
+    image: 18888-go
+    ports:
+      - "8080:8080"

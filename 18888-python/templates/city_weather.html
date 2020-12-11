@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css"
+      href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+<table id="example" class="display" width="90%"></table>
+
+<script>
+    var data_set = {{ data_set | tojson }};
+    var columns = {{ columns | tojson }};
+    $(document).ready(function () {
+        $('#example').DataTable({
+            data: data_set,
+            columns: columns
+        });
+    });
+</script>
