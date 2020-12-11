@@ -13,7 +13,7 @@ def index():
 @app.route("/hot_city")
 def hot_city():
     data_set = []
-    for city in ["beijing", "tianjin", "shanghai", "chongqing","hangzhou"]:
+    for city in ["beijing", "tianjin", "shanghai", "chongqing"]:
         data = WeatherService.fetch_city_weather(city)
         data = list(data.to_dict().values())
         data_set.append(data)

@@ -4,7 +4,7 @@
 <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 
-<table id="example" class="display" width="90%"></table>
+<table id="example" class="display" width="100%"></table>
 
 <script>
     var data_set = {{ data_set | tojson }};
@@ -12,7 +12,10 @@
     $(document).ready(function () {
         $('#example').DataTable({
             data: data_set,
-            columns: columns
+            columns: columns,
+            columnDefs: [
+                {"className": "dt-center", "targets": "_all"}
+            ]
         });
     });
 </script>
