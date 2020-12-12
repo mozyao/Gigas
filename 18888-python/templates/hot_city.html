@@ -3,9 +3,17 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
-
-<table id="example" class="display" width="100%"></table>
-
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hot City Weather</title>
+</head>
+<body>
+<center>
+    <h1>Hot City Weather</h1>
+    <table id="example" class="display" width="100%"></table>
+</center>
+</body>
 <script>
     var data_set = {{ data_set | tojson }};
     var columns = {{ columns | tojson }};
@@ -20,3 +28,8 @@
         });
     });
 </script>
+<style>
+    body {
+        background-image: url("/static/1.jpeg");
+    }
+</style>

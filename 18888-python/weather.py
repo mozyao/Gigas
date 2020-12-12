@@ -40,3 +40,12 @@ class WeatherService:
             humidity=int(data["Weather"]["humidity"]),
             pressure=int(data["Weather"]["pressure"])
         )
+
+    @classmethod
+    def fetch_city_weather_multiple_days(cls, city_name):
+        api_key = "33ee858476654de99d7c4ec30a5084d2"
+        r = requests.get(f"https://geoapi.qweather.com/v2/city/lookup?key={api_key}&location={city_name}&gzip=n")
+        city_id = r.json()["location"][0]["id"]
+        r = requests.get(f"https://devapi.qweather.com/v7/weather/3d?key={api_key}&location={city_id}&gzip=n&lang=en")
+        data = r.json()["daily"]
+        pass
