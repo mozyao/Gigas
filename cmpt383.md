@@ -28,6 +28,7 @@ $ make image
 $ cd ..
 $ docker-compose up
 Open the chrome and go to localhost:5000/index
+The response speed is slow, it takes 4-5s to load the info from REST API :(
 
 5) Features 
 1. You can search a city's weather by entering the name of it and click the [Get Weather] button
@@ -36,4 +37,10 @@ Open the chrome and go to localhost:5000/index
 4. The search bar in subpage is not working till this point
 5. You can choose how many entries to show (10,25,50 or 100) when there are many rows.
 6. The Previous and Next  buttons can work when put more than 10 cities into the popular city list in code.
+
+Future Work
+1. Fix bugs  of search in the sub-page
+2. Imporve UI
+3. Cut down the response time of actions
+4. Add more useful features
 
